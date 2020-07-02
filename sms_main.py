@@ -100,8 +100,6 @@ api_list = [
     },
 ]
 
-
-
 def replacePhone(phone):
     target_list = []
     for api in api_list:
