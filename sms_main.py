@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 import json
 import re
-import time
 
 import requests
 
@@ -110,7 +109,6 @@ def replacePhone(phone):
     return target_list
 
 
-
 def default(jiekou, headers):
     resp = requests.request(
         url=jiekou["url"],
@@ -153,7 +151,6 @@ def ruanmei(jiekou):
     # 获取token
     resp = requests.request(url=jiekou["first"]["url"], method=jiekou["first"]["type"], headers=jiekou["headers"])
     jiekou["parm"]["data"] = re.findall("id=\"data20190202\" value='(.*?)'", resp.text)[0]
-    print(jiekou["parm"]["data"])
 
     # 发送短信
     resp = requests.request(
@@ -187,7 +184,6 @@ def run(jiekou_list):
             if jiekou.get("headers"):
                 headers = jiekou.get("headers")
             default(jiekou, headers)
-
 
 
 if __name__ == '__main__':
