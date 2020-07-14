@@ -140,7 +140,6 @@ def xxsy(jiekou):
         headers=jiekou["headers"],
         data=jiekou.get("parm")
     )
-    print("潇湘书院")
     print(resp.status_code)
     print(resp.content.decode())
     print(resp.url)
@@ -159,7 +158,6 @@ def ruanmei(jiekou):
         headers=jiekou["headers"],
         data=json.dumps(jiekou.get("parm"))
     )
-    print("软媒")
     print(resp.status_code)
     print(resp.content.decode())
     print(resp.url)
@@ -191,3 +189,7 @@ if __name__ == '__main__':
     phone = input("输入手机号: ")
     target_list = replacePhone(phone)
     run(target_list)
+    print("-------多线程多接口软件--------")
+    print("QQ: 2416447718")
+    print("QQ: 2470571458")
+    print("TG: @porsms")
