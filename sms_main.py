@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 import json
 import re
-
 import requests
 
 api_list = [
